@@ -487,12 +487,10 @@ public class Lab_09_nine {
 
     static public void Four(){
         System.out.println("Зробити висновок про достатність природнього освітлення:");
-
-        System.out.println(KPO_Norm);
         for (int i = 0; i < 5;i++) {
-            if (local[i] / KPO_Norm >= 1) System.out.println("На робочому місці " + i + " освітлення в нормі;");
+            if (local[i] / KPO_Norm >= 1) System.out.println("На робочому місці " + String.format("%s",i+1) + " освітлення в нормі;");
 
-            else System.out.println("На робочому місці " + i + " освітлення не достатньо;");
+            else System.out.println("На робочому місці " + String.format("%s",i+1) + " освітлення не достатньо;");
         }
         Final();
     }
