@@ -114,6 +114,10 @@ public class Main {
             {
                 Test_01_first.main(var);
             }
+            else if ( num == 2 )
+            {
+                Test_02_two.main(var);
+            }
             else if (num == 4)
             {
                 Test_04_four.main(var);
