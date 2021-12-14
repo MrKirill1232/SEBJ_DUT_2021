@@ -180,10 +180,10 @@ public class Lab_10_ten {
         System.out.println("Варіант: " + num);
         switch (pre_one)
         {
-            case 0:
+            case 1:
                 System.out.println("Частота: f = " + table1[num][1] + " МГц");
                 break;
-            case 1:
+            case 0:
                 System.out.println("Частота: f = " + table1[num][1] + " кГц");
                 break;
         }
@@ -453,19 +453,18 @@ public class Lab_10_ten {
         System.out.println("За таблицею №2, знаходимо в колонці з діапазонами, даний нам на початку діапазон та виписуємо значення ГДР для населення.");
         double local_diap;
         if ( table2[num][10] == 9){
-            local_diap = 10*Math.pow(10,-4);
+            local_diap = 10;
         }
         else {
-            local_diap = 2.5*Math.pow(10,-4);
+            local_diap = 2.5;
         }
-        System.out.println("ГПЕ_гдр (для населення) = " + String.format("%.2f", (local_diap/Math.pow(10,-4))) + " мкВт/см^2" );
-        double local_r_2_3 = ( (table2[num][7]*Math.pow(10,6)) * table2[num][9] ) / (4 * 3.14 * local_diap);
+        System.out.println("ГПЕ_гдр (для населення) = " + String.format("%.2f", (local_diap)) + " мкВт/см^2 = " + String.format("%.2f", (local_diap/0.0001)) + " мкВт/м^2");
+        double local_r_2_3 = ( (table2[num][7] / 0.0001 ) * table2[num][9] ) / (4 * 3.14 * local_diap/0.0001);
         String S_local_r_2_3 = String.format("%.2f", (local_r_2_3));
         String S_sqrt_local_r_2_3 = String.format("%.2f", (Math.sqrt(local_r_2_3)));
+        System.out.println("P = " + table2[num][7] + " мкВт/см^2 = " + ( table2[num][7] /0.0001 ) + " мкВт/м^2");
         System.out.println("ГПЕ = ( P * g ) / ( 4 * π * R^2 ) " );
-        System.out.println("P = " + table2[num][7] + " мкВт/см^2 => " + String.format("%.2f", (table2[num][7]*Math.pow(10,6))) + " Вт/м^2" );
-        System.out.println("ГПЕ_гдр = " + String.format("%.3f", (local_diap/Math.pow(10,-4))) + " мкВт/см^2 => " + String.format("%.5f", (local_diap)) + " Вт/м^2" );
-        System.out.println("R^2 = ( P * g ) / ( 4 * π * ГПЕ ) => ( " + (table2[num][7]*Math.pow(10,6)) + " * " + table2[num][9] + " ) / 4 * 3.14 * " + String.format("%.5f", (local_diap)) + " = " + S_local_r_2_3 + " м^2");
+        System.out.println("R^2 = ( P * g ) / ( 4 * π * ГПЕ ) => ( " + ( table2[num][7] /0.0001 ) + " * " + table2[num][9] + " ) / 4 * 3.14 * " + String.format("%.2f", (local_diap/0.0001)) + " = " + S_local_r_2_3 + " м^2");
         System.out.println("R = √" + S_local_r_2_3 + " = " + S_sqrt_local_r_2_3 + " м");
         System.out.println("=====");
         System.out.println("Визначити необхідну відстань від скануючої антени ( для працюючих )");
@@ -477,20 +476,19 @@ public class Lab_10_ten {
         System.out.println("Розв'язок");
         System.out.println("За таблицею №2, знаходимо в колонці з діапазонами, даний нам на початку діапазон та виписуємо значення ГДР для працюючих.");
         if ( table2[num][10] == 9){
-            local_diap = 10*Math.pow(10,-4);
+            local_diap = 10;
         }
         else {
-            local_diap = 10*Math.pow(10,-4);
+            local_diap = 10;
         }
-        System.out.println("ГПЕ_гдр (для працюючих) = " + String.format("%.5f", (local_diap/Math.pow(10,-4))) + " мкВт/см^2" );
-        System.out.println("P = " + table2[num][7] + " мкВт/см^2 => " + String.format("%.2f", (table2[num][7]*Math.pow(10,6))) + " Вт/м^2" );
-        System.out.println("ГПЕ_гдр = " + String.format("%.3f", (local_diap/Math.pow(10,-4))) + " мкВт/см^2 => " + String.format("%.5f", (local_diap)) + " Вт/м^2" );
-        local_r_2_3 = ( (table2[num][7]*Math.pow(10,6)) * table2[num][9] ) / (4 * 3.14 * 2 / table2[num][8]);
+        System.out.println("ГПЕ_гдр (для працюючих) = " + String.format("%.2f", (local_diap)) + " мкВт/см^2 = " + String.format("%.2f", (local_diap/0.0001)) + " мкВт/м^2 = " + String.format("%.2f", ((local_diap/0.0001)*0.000001)) + " мкВт/м^2");
+        System.out.println("P = " + table2[num][7] + " мкВт/см^2 => " + String.format("%.2f", ((table2[num][7]/0.0001)*0.000001)) + " Вт/м^2" );
+        local_r_2_3 = ( ((table2[num][7]/0.0001)*0.000001) * table2[num][9] ) / (4 * 3.14 * 2 / ((local_diap/0.0001)*0.000001));
         S_local_r_2_3 = String.format("%.2f", (local_r_2_3));
         S_sqrt_local_r_2_3 = String.format("%.2f", (Math.sqrt(local_r_2_3)));
         System.out.println("ЕН = 2 Вт*год/м^2 | з Таблиці 6" );
-        System.out.println("ГПЕ = ( ЕН / T ) = ( 2 / " + table2[num][8] + " = " + String.format("%.2f",(2 / table2[num][8])) + " Вт/м^2");
-        System.out.println("R^2 = ( P * g ) / ( 4 * π * ГПЕ ) => ( " + String.format("%.2f", (table2[num][7]*Math.pow(10,6))) + " * " + table2[num][9] + " ) / 4 * 3.14 * " + String.format("%.2f",(2 / table2[num][8])) + " = " + S_local_r_2_3 + " м^2");
+        System.out.println("ГПЕ = ( ЕН / T ) = ( 2 / " + table2[num][8] + " ) = " + String.format("%.2f",(2 / table2[num][8])) + " Вт/м^2");
+        System.out.println("R^2 = ( P * g ) / ( 4 * π * ГПЕ ) => ( " + String.format("%.2f", (table2[num][7])) + " * " + table2[num][9] + " ) / 4 * 3.14 * " + String.format("%.2f", (((local_diap/0.0001)*0.000001))) + " = " + S_local_r_2_3 + " м^2");
         System.out.println("R = √" + S_local_r_2_3 + " = " + S_sqrt_local_r_2_3 + " м");
         Final();
     }
