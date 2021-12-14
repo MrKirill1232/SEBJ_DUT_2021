@@ -119,12 +119,12 @@ public class Lab_07_seven {
     {
         System.out.print("\n==\n");
         System.out.println("Щодо розрахунку ЕФЕКТИВНОСТІ ПРИРОДНОЇ вентиляції");
-        String tab_1 = "| %-5s | %-4s | %-4s | %-5s | %-6s | %-5s | %-5s | %-7s |%n";
-        System.out.println("+-------+------+------+-------+--------+-------+-------+---------+");
+        String tab_1 = "| %-5s | %-5s | %-5s | %-6s | %-7s | %-6s | %-6s | %-8s |%n";
+        System.out.println("+-------+-------+-------+--------+---------+--------+--------+----------+");
         System.out.format(tab_1, "# вар", "A", "B", "H", "n","a", "b","c");
-        System.out.println("+-------+------+------+-------+--------+-------+-------+---------+");
+        System.out.println("+-------+-------+-------+--------+---------+--------+--------+----------+");
         System.out.format(tab_1, "  "+num, (int)tab_2_values[num][1]+" м", (int)tab_2_values[num][2]+" м", (int)tab_2_values[num][3]+" м", (int)tab_2_values[num][4]+" чол", tab_2_values[num][5]+" м", tab_2_values[num][6]+" м", tab_2_values[num][7]+" м/с");
-        System.out.println("+-------+------+------+-------+--------+-------+-------+---------+");
+        System.out.println("+-------+-------+-------+--------+---------+--------+--------+----------+");
         System.out.println("Розрахунки:");
         double V = (int)tab_2_values[num][1]*(int)tab_2_values[num][2]*(int)tab_2_values[num][3];
         System.out.print("V = A * B * H = " + (int)V + " м^3");

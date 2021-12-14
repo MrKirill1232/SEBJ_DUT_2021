@@ -90,6 +90,21 @@ public class Main {
         }
         else if (num == 2)
         {
+            System.out.print("""
+                    ТЕСТ 01 - Екологічний Податок -https://t.me/hellomyteam/342?comment=148\s
+                    ТЕСТ 02 - Ризик-орієнтовний підхід - https://t.me/hellomyteam/342?comment=149\s
+                    ТЕСТ 03 - Психологічне дослідження - https://t.me/hellomyteam/342?comment=150\s
+                    ТЕСТ 04 - Радіаційна безпека -  https://t.me/hellomyteam/342?comment=151\s
+                    ТЕСТ 05 - Хімічні речовини та пил - https://t.me/hellomyteam/342?comment=152\s
+                    ТЕСТ 06+07 - Мікроклімат + Вентиляція - https://t.me/hellomyteam/342?comment=153\s
+                    ТЕСТ 08 - Законодавство з Основ Охорони Праці - https://t.me/hellomyteam/342?comment=154\s
+                    ТЕСТ 09 - Дослідження та оцінка виробничого освітлення - https://t.me/hellomyteam/342?comment=155\s
+                    ТЕСТ 10 - Оцінка рівнів ЕМВ - https://t.me/hellomyteam/342?comment=156\s
+                    ТЕСТ 11 - Домедична допомога - https://t.me/hellomyteam/342?comment=157\s
+                    ТЕСТ 12 - Пожежа - https://t.me/hellomyteam/342?comment=158\s
+                    ТЕСТ 13 - Шум та вібрація - https://t.me/hellomyteam/342?comment=159\s
+                    ТЕСТ 14 - Аналіз травматизму - https://t.me/hellomyteam/342?comment=160\s
+                    ТЕСТ 15 - Електробезпека - https://t.me/hellomyteam/342?comment=161\s""");
             System.out.print("\nНомер теста: ");
             num = in.nextInt();
             System.out.print("\nНомер варианта: ");
