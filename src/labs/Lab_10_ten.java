@@ -213,11 +213,11 @@ public class Lab_10_ten {
                 System.out.println("W_гдр = K * ( ЕН_w_гдр / T );");
                 System.out.println("K = 1 ( для антен, що не обертаються та не сканують )");
                 System.out.println("ЕН_w_гдр = " + ENgdr + " Вт * год / м^2");
-                System.out.println("Переводимо значення ГПЕ з мВт в Вт ( умжножаем на 0.001 Вт )");
+                System.out.println("Переводимо значення ГПЕ з мВт в Вт ( умжножаем на 0.001 )");
                 ENfact1_1 = ENgdr/table1[num][6];
                 System.out.println("W_гдр = 1 * ( " + ENgdr + " / " + table1[num][6] + " ) = " + ENfact1_1 + " Вт/м^2");
-                System.out.println("K = ГПЕ / W_гдр = " + table1[num][2]*0.001 + " / " + ENfact1_1 + " = " + table1[num][2]*0.001 / ENfact1_1);
-                System.out.println("Відповідь: Перевищення в " + table1[num][2]*0.001 / ENfact1_1 + " разів!");
+                System.out.println("K = ГПЕ / W_гдр = " + String.format("%.2f",table1[num][2]*0.001) + " / " + ENfact1_1 + " = " + String.format("%.2f",table1[num][2]*0.001 / ENfact1_1));
+                System.out.println("Відповідь: Перевищення в " + String.format("%.2f",table1[num][2]*0.001 / ENfact1_1) + " разів!");
                 break;
             case 1:
                 System.out.println("Час опромінення T = " + table1[num][6] + " год");
