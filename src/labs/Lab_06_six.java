@@ -133,7 +133,7 @@ public class Lab_06_six {
         ex_1_1 = F_f[0] - ex_1_1;
         String s_ex_1_1 = String.format("%.2f", (ex_1_1));
 
-        double ex_1_2 = (ex_1_1/F_f[1])*100;
+        double ex_1_2 = (ex_1_1/F_f[0])*100;
         String s_ex_1_2 = String.format("%.2f", (ex_1_2));
 
         System.out.format("+----+------------------------------------------+----------+--------------------------------+%n");
@@ -303,7 +303,7 @@ public class Lab_06_six {
         {
             over_tab_2_3_1 = "Ниже норми";
             micro_over_tab_2_3_1 = 1;
-            final_over_tab_2_3_1 = "охолоджуваючий";
+            final_over_tab_2_3_1 = "охолоджуючий";
         }
         else if ( tab_7_values[num][4] > local_min &&  tab_7_values[num][4] <= local_max)
         {
